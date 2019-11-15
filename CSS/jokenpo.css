@@ -18,6 +18,9 @@ body {
     border-radius: 30px 30px 30px 30px;
     padding: 10px;
 }
+#displayBatalha {
+    display: none;
+}
 /* Menu */
 #menu {
     background: rgb(59, 151, 59);
@@ -55,7 +58,25 @@ body {
     color: rgb(205, 255, 130);
     font-style: oblique;
 }
-/* Botão para escolher jogaca */
+/* Botão de Batalha */
+.butBatalha {
+    background:  rgb(114, 255, 114);
+    color: rgb(10, 83, 10);
+    border: none;
+    outline-style: none;
+    margin: 20px;
+    height: 50px;
+    width: 280px;
+    font-size: 20pt;
+    letter-spacing: 1px;
+}           
+.butBatalha:hover{
+    background: rgb(155, 253, 155);
+}
+.butBatalha:active {
+    background: rgb(132, 247, 132);
+}
+/* Botão para escolher jogada */
 .divOpcoesDoPlayer {
     background: limegreen;
     margin: auto;

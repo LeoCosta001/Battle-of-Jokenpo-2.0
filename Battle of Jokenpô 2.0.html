@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Aquivo CSS -->
     <link rel="stylesheet" type="text/css" href="CSS/jokenpo.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/displayBattleFinish.css" media="screen" />
     <title>Game: Jokenpô 2.0</title>
 </head>
 
@@ -15,41 +16,70 @@
     <div class="divPai">
         <!-- Menu -->
         <div id="menu">
-            <div id="divJogadasMenu"><img id="jogadasMenu"src="imagens/jogadasIcon.png"></div>
-            <div class="menuText">Nível: <p class="menuText" id="menuNivel">0</p></div>
-            <div class="menuText">Exp: <p class="menuText" id="menuEXP">0</p></div>
-        </div>
-    <!-- Opções do Usuário -->
-        <p class="tituloEscolher">Escolha uma dessas jogadas</p>
-        <div class="divOpcoesDoPlayer">
-            <img id="imgPedra" class="imgEscolher" src="imagens/pedra.png">
-            <img id="imgPapel" class="imgEscolher" src="imagens/papel.png">
-            <img id="imgTesoura" class="imgEscolher" src="imagens/tesoura.png">
+            <div id="divJogadasMenu"><img id="jogadasMenu" src="imagens/jogadasIcon.png"></div>
+            <div class="menuText">Nível: <p class="menuText" id="menuNivel">1</p>
+            </div>
+            <div class="menuText">Exp: <p class="menuText" id="menuEXP">0</p>
+            </div>
         </div>
         <!-- Botão de Iniciar Partida -->
-        <input id="butJogar" type="button" value="Jogar">
-        <!-- Arena -->
-        <div id="divArena">
-            <img id="selectPlayer" src="imagens/noChange.png">
-            <img id="imgVs" src="imagens/vs.jpg">
-            <img id="selectCPU" src="imagens/noChange.png">
-        </div>
-        <!-- Status da Arena -->
-        <div id="consoleGame"></div>
-        <div id="consoleGameDescri"></div>
-        <!-- Placar -->
-        <div class="placar">
-            <div class="placarFilho">
-                <p class="titlePlacar">Você:</p>
-                <p class="titlePlacar" id="scorePlayer">0</p>
+        <input id="butBatalhaNivel1" class="butBatalha" type="button" value="Batalha Nivel 1">
+        <!--Display de Batalha Nivel1-->
+        <div id="displayBatalha">
+            <!-- Opções do Usuário -->
+            <p class="tituloEscolher">Escolha uma dessas jogadas</p>
+            <div class="divOpcoesDoPlayer">
+                <img id="imgPedra" class="imgEscolher" src="imagens/pedra.png">
+                <img id="imgPapel" class="imgEscolher" src="imagens/papel.png">
+                <img id="imgTesoura" class="imgEscolher" src="imagens/tesoura.png">
             </div>
-            <div class="placarFilho">
-                <p class="titlePlacar">CPU:</p>
-                <p class="titlePlacar" id="scoreCPU">0</p>
+            <!-- Botão de Iniciar Partida -->
+            <input id="butJogar" type="button" value="Jogar">
+            <!-- Arena -->
+            <div id="divArena">
+                <img id="selectPlayer" src="imagens/noChange.png">
+                <img id="imgVs" src="imagens/vs.jpg">
+                <img id="selectCPU" src="imagens/noChange.png">
+            </div>
+            <!-- Status da Arena -->
+            <div id="consoleGame"></div>
+            <div id="consoleGameDescri"></div>
+            <!-- Placar -->
+            <div class="placar">
+                <div class="placarFilho">
+                    <p class="titlePlacar">Você:</p>
+                    <p class="titlePlacar" id="scorePlayer">0</p>
+                </div>
+                <div class="placarFilho">
+                    <p class="titlePlacar">CPU:</p>
+                    <p class="titlePlacar" id="scoreCPU">0</p>
+                </div>
+            </div>
+        </div>
+        <!-- Display Battle Finish -->
+        <div id="displayBattleFinish">
+            <div id="battleFinishTitle"></div>
+            <div id="battleFinishDescri"></div>
+            <div class="placar">
+                <div class="placarFilho">
+                    <p class="titlePlacar">Você:</p>
+                    <p class="titlePlacar" id="scoreFinalPlayer">0</p>
+                </div>
+                <div class="placarFilho">
+                    <p class="titlePlacar">CPU:</p>
+                    <p class="titlePlacar" id="scoreFinalCPU">0</p>
+                </div>
+            </div>
+            <input id="butBattleChange" class="butBatalha" type="button" value="Escolher Batalha">
+            <div id="displayNivelUp">
+                <img class="imgNivelUp" src="imagens/levelUP.png">
+                <div id="nivelUpDescri"></div>
+                <div id="nivelUpSubDescri"></div>
             </div>
         </div>
     </div>
     <!--Script-->
+    <script src="script/variavelDeBatalha.js"></script>
     <script src="script/jokenpo.js"></script>
     <script src="script/playerChange.js"></script>
 

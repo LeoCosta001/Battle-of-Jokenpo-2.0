@@ -1,0 +1,33 @@
+#displayBattleFinish {
+   display: none;
+}
+#battleFinishTitle {
+    font-size: 25px;
+}
+/* Botão de Escolher Batalha */
+.butBattleChange {
+    display: none;
+    background:  rgb(114, 255, 114);
+    color: rgb(10, 83, 10);
+    border: none;
+    outline-style: none;
+    margin: 20px;
+    height: 50px;
+    width: 280px;
+    font-size: 20pt;
+    letter-spacing: 1px;
+}           
+.butBattleChange:hover{
+    background: rgb(155, 253, 155);
+}
+.butBattleChange:active {
+    background: rgb(132, 247, 132);
+}
+/* Display Nivel UP */
+#displayNivelUp {
+    display: none;
+}
+.imgNivelUp {
+    width: 375px;
+    height: 210px;
+}
