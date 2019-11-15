@@ -10,13 +10,17 @@ const consoleGame = document.querySelector("#consoleGame");
 const consoleGameDescri = document.querySelector("#consoleGameDescri");
 const playerPlacar = document.querySelector("#scorePlayer");
 const CPUPlacar = document.querySelector("#scoreCPU");
-// Variaveis de Status
+// Variaveis de Game Status
 let partida = "off";
+let batalha = "off"
 let playerChange = "";
 let CPUChange = 0;
 // Variaveis de Pontuação
 let playerScore = 0
 let CPUScore = 0
+let EXP = 0
+let nivel = 0
+let placarFinal = 100
 // Variaveis de jogadas
 let jogadasCPU = ["pedra", "papel", "tesoura"]
 
@@ -112,12 +116,11 @@ butJogar.addEventListener("click", t => {
                     playerScore = playerScore + 5
                     CPUScore = CPUScore + 5
                 }
+                playerPlacar.innerHTML = `${playerScore}`
+                CPUPlacar.innerHTML = `${CPUScore}`
+                partida = "on";
+                butJogar.value = "Outra Partida";
             }, 2000); // <---- Tempo para pausar evento      
-
-            partida = "on";
-            butJogar.value = "Outra Partida";
-            playerPlacar.innerHTML = `${playerScore}`
-            CPUPlacar.innerHTML = `${CPUScore}`
         }
     } else {
         // Resetando os status do jogo
