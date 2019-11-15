@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Aquivo CSS -->
+    <link rel="stylesheet" type="text/css" href="CSS/jokenpo.css" media="screen" />
+    <title>Game: Jokenpô 1.0</title>
+</head>
+
+<body>
+    <div class="gameTitle">Battle of Jokenpô 1.0</div>
+    <div class="divPai">
+        <!-- Opções do Usuário -->
+        <p class="tituloEscolher">Escolha uma dessas jogadas</p>
+        <div class="divOpcoesDoPlayer">
+            <img id="imgPedra" class="imgEscolher" src="imagens/pedra.png">
+            <img id="imgPapel" class="imgEscolher" src="imagens/papel.png">
+            <img id="imgTesoura" class="imgEscolher" src="imagens/tesoura.png">
+        </div>
+        <!-- Botão de Iniciar Partida -->
+        <input id="butJogar" type="button" value="Jogar">
+        <!-- Arena -->
+        <div id="divArena">
+            <img id="selectPlayer" src="imagens/noChange.png">
+            <img id="imgVs" src="imagens/vs.jpg">
+            <img id="selectCPU" src="imagens/noChange.png">
+        </div>
+        <!-- Status da Arena -->
+        <div id="consoleGame"></div>
+        <div id="consoleGameDescri"></div>
+        <!-- Placar -->
+        <div class="placar">
+            <div class="placarFilho">
+                <p class="titlePlacar">Você:</p>
+                <p class="titlePlacar" id="scorePlayer">0</p>
+            </div>
+            <div class="placarFilho">
+                <p class="titlePlacar">CPU:</p>
+                <p class="titlePlacar" id="scoreCPU">0</p>
+            </div>
+        </div>
+    </div>
+    <!--Script-->
+    <script src="script/jokenpo.js"></script>
+    <script src="script/playerChange.js"></script>
+
+</body>
+
+</html>

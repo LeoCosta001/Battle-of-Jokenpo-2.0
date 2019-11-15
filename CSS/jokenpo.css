@@ -1,0 +1,108 @@
+body {
+    background: cornflowerblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.gameTitle {
+    text-align: center;
+    font-size: 40pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    margin: -15px;
+}
+.divPai {
+    background: rgb(231, 231, 231);
+    margin: auto;
+    text-align: center;
+    width: 700px;
+    height: 500px;
+}
+/* Botão para escolher jogaca */
+.divOpcoesDoPlayer {
+    background: limegreen;
+    margin: auto;
+    border-radius: 100px 100px 100px 100px;
+    border: solid 5px rgb(37, 131, 37);
+    padding-top: 10px;
+    width: 250px;
+}
+.imgEscolher {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    opacity: 60%;
+}
+.imgEscolher:hover {
+    opacity: 100%;
+    height: 55px;
+    width: 55px;
+    margin-top: -30px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: -5px;
+    transition: 0.1s ease-in;
+}
+/* Botão de Jogar */
+#butJogar {
+    background:  rgb(114, 255, 114);
+    color: rgb(10, 83, 10);
+    border: none;
+    outline-style: none;
+    margin: 20px;
+    height: 50px;
+    width: 250px;
+    font-size: 20pt;
+    letter-spacing: 5px;
+}           
+#butJogar:hover{
+    background: rgb(155, 253, 155);
+}
+#butJogar:active {
+    background: rgb(132, 247, 132);
+}
+/* Arena */
+#selectPlayer {
+    height: 55px;
+    width: 55px;
+    margin: 15px;
+}
+#imgVs {
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+}
+#selectCPU {
+    height: 55px;
+    width: 55px;
+    margin: 15px;
+}
+/* ConsoleGame */
+#consoleGame {
+    margin: 15px;
+    margin-bottom: -5px;
+    font-size: 20pt;
+    height: 40px;
+}
+#consoleGameDescri {
+    margin-bottom: 15px;
+    font-size: 12pt;
+    height:20px;
+}
+/* Placar */
+.placar {
+    margin: auto;
+    padding: 5px;
+    height: 50px;
+}.placarFilho {
+    display: inline-block;
+    background: rgb(185, 185, 185);
+    border: solid 5px rgb(145, 145, 145);
+    border-radius: 50px 50px 50px 50px;
+}
+
+.titlePlacar {
+    display: inline;
+    font-size: 20pt;
+    padding: 10px;
+}
