@@ -8,10 +8,21 @@
     <!-- Aquivo CSS -->
     <link rel="stylesheet" type="text/css" href="CSS/jokenpo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/displayBattleFinish.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/popupHelp.css" />
     <title>Game: Jokenpô 2.0</title>
 </head>
 
 <body>
+    <img id="helpButton" src="imagens/help.png">
+    <div id="helpPaiBg">
+        <div id="helpPai">
+            <div>Battle of Jokenpô 2.0 (beta)</div>
+            <div>Central de Ajuda.</div></br>
+            <div>- Ganha a batalha quem fizer 50 Pontos primeiro</div>
+            <div>- Vitória da 100 de Exp, Empate 50 de Exp e Derrota 20 de Exp</div>
+            <div>- Com 300 Pontos de Exp você conquista o Nivel 2</div>
+        </div>
+    </div>
     <div class="gameTitle">Battle of Jokenpô 2.0</div>
     <div class="divPai">
         <!-- Menu -->
@@ -70,18 +81,21 @@
                     <p class="titlePlacar" id="scoreFinalCPU">0</p>
                 </div>
             </div>
-            <input id="butBattleChange" class="butBatalha" type="button" value="Escolher Batalha">
+            <!-- Display de Level Up -->
             <div id="displayNivelUp">
                 <img class="imgNivelUp" src="imagens/levelUP.png">
                 <div id="nivelUpDescri"></div>
                 <div id="nivelUpSubDescri"></div>
             </div>
+            <!-- Botão de Escolher Batalha -->
+            <input id="butBattleChange" class="butBatalha" type="button" value="Escolher Batalha">
         </div>
     </div>
     <!--Script-->
     <script src="script/variavelDeBatalha.js"></script>
     <script src="script/jokenpo.js"></script>
     <script src="script/playerChange.js"></script>
+    <script src="script/popupHelp.js"></script>
 
 </body>
 

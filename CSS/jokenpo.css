@@ -2,6 +2,13 @@ body {
     background: cornflowerblue;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+#helpButton {
+    width: 104.6px;
+    height: 103.2px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 60px;
+}
 
 .gameTitle {
     text-align: center;

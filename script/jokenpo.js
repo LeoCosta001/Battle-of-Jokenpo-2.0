@@ -19,6 +19,7 @@ const menuNivel = document.querySelector("#menuNivel")
 const battleFinishDescri = document.querySelector("#battleFinishDescri")
 const nivelUpDescri = document.querySelector("#nivelUpDescri")
 const nivelUpSubDescri = document.querySelector("#nivelUpSubDescri")
+const helpDisplay = document.querySelector("#helpPaiBg")
 // Variaveis de Game Status
 let partida = "off";
 let playerChange = "";
@@ -140,6 +141,8 @@ butJogar.addEventListener("click", t => {
                     }
                     // Verificando se a partida ja chegou no final
                     if (playerScore >= 50 || CPUScore >= 50) {
+                        playerPlacar.innerHTML = `${playerScore}`
+                        CPUPlacar.innerHTML = `${CPUScore}`
                         butJogar.value = "Acabou!"
                         // Verificar se deu empate
                         if (playerScore == CPUScore) {
