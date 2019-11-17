@@ -50,12 +50,17 @@ const jogDescri1 = document.querySelector("#menuJogadasDescri1");
 const jogDescri2 = document.querySelector("#menuJogadasDescri2");
 const jogDescri3 = document.querySelector("#menuJogadasDescri3");
 const jogDescri4 = document.querySelector("#menuJogadasDescri4");
+// Slots Vazios
+const jogSlot1 = document.querySelector("#imgJogSlot1");
+const jogSlot2 = document.querySelector("#imgJogSlot2");
+const jogSlot3 = document.querySelector("#imgJogSlot3");
+const jogSlot4 = document.querySelector("#imgJogSlot4");
 // ####### Variaveis de jogadas #######
 let jogadasCPU = ["pedra", "papel", "tesoura"];
-let jogadasPlayerEsponja = false //"comprar";
-let jogadasPlayerAr = false //"comprar";
-let jogadasPlayerAgua = false //"comprar";
-let jogadasPlayerFogo = false //"comprar";
+let jogadasPlayerEsponja = "comprar";
+let jogadasPlayerAr = "comprar";
+let jogadasPlayerAgua = "comprar";
+let jogadasPlayerFogo = "comprar";
 let jogArEspecial = 2
 let jogAguaEspecial = 2
 // ####### Variaveis de Game Status #######
@@ -64,7 +69,12 @@ let CPUChange = 0;
 let partida = "off";
 let start = "off";
 let batalha = false;
-let totalJogadas = 0
+let totalJogadas = 0;
+let totalJogadasMax = 0;
+let slot1 = false
+let slot2 = false
+let slot3 = false
+let slot4 = false
 // ####### Variaveis de Pontuação #######
 let playerScore = 0;
 let CPUScore = 0;
@@ -281,7 +291,7 @@ butJogar.addEventListener("click", t => {
                     }
 
                     // ####### Verificando se a partida ja chegou no final #######
-                    if (playerScore >= 50 || CPUScore >= 50) {
+                    if (playerScore >= 10 || CPUScore >= 10) {
                         playerPlacar.innerHTML = `${playerScore}`
                         CPUPlacar.innerHTML = `${CPUScore}`
                         butJogar.value = "Acabou!"
@@ -292,11 +302,11 @@ butJogar.addEventListener("click", t => {
                             playButton()
                             window.setTimeout(function () {
                                 playButton()
-                                EXP = EXP + 50
+                                EXP = EXP + 100 //50
                                 battleFinish()
                             }, 5000);
                         } else {
-                            if (playerScore >= 50) {
+                            if (playerScore >= 10) {
                                 battleFinishTitle.innerHTML = "Parabens! Você ganhou!"
                                 battleFinishDescri1.innerHTML = "Exp + 100"
                                 playButton()
@@ -306,13 +316,13 @@ butJogar.addEventListener("click", t => {
                                     battleFinish()
                                 }, 5000);
                             }
-                            if (CPUScore >= 50) {
+                            if (CPUScore >= 10) {
                                 battleFinishTitle.innerHTML = "Você Perdeu!"
                                 battleFinishDescri1.innerHTML = "Exp + 20"
                                 playButton()
                                 window.setTimeout(function () {
                                     playButton()
-                                    EXP = EXP + 20
+                                    EXP = EXP + 100 //20
                                     battleFinish()
                                 }, 5000);
                             }
@@ -357,8 +367,10 @@ function battleFinish() {
         menuPJ.innerHTML = PJ
         battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
         nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
-        nivelUpSubDescri.innerHTML = `Batalha Nivel 2 Desbloqueado`
+        nivelUpSubDescri.innerHTML = `+ 1 Slot de Jogada liberado.`
         displayNivelUp.style.display = "block"
+        totalJogadasMax = totalJogadasMax + 1
+        jogSlot1.style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 3)
     if (EXP >= 101 && nivel == 2) {
@@ -367,12 +379,34 @@ function battleFinish() {
         menuPJ.innerHTML = PJ
         battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
         nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
-        nivelUpSubDescri.innerHTML = `Batalha Nivel 3 Desbloqueado`
+        nivelUpSubDescri.innerHTML = `Batalha Nivel 2 Desbloqueado`
         displayNivelUp.style.display = "block"
     }
     //Verificar Nivel Up (Nivel 4)
-    if (EXP >= 201 && nivel == 2) {
+    if (EXP >= 201 && nivel == 3) {
         nivel = 4
+        PJ = PJ + 1
+        menuPJ.innerHTML = PJ
+        battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
+        nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
+        nivelUpSubDescri.innerHTML = `Batalha Nivel 3 Desbloqueado`
+        displayNivelUp.style.display = "block"
+    }
+    //Verificar Nivel Up (Nivel 5)
+    if (EXP >= 301 && nivel == 4) {
+        nivel = 5
+        PJ = PJ + 1
+        menuPJ.innerHTML = PJ
+        battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
+        nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
+        nivelUpSubDescri.innerHTML = `+ 1 Slot de Jogada liberado.`
+        displayNivelUp.style.display = "block"
+        totalJogadasMax = totalJogadasMax + 1
+        jogSlot2.style.display = "inline-block"
+    }
+    //Verificar Nivel Up (Nivel 6)
+    if (EXP >= 401 && nivel == 5) {
+        nivel = 6
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
         battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
@@ -380,6 +414,50 @@ function battleFinish() {
         nivelUpSubDescri.innerHTML = `Batalha Nivel 4 Desbloqueado`
         displayNivelUp.style.display = "block"
     }
+    //Verificar Nivel Up (Nivel 7)
+    if (EXP >= 501 && nivel == 6) {
+        nivel = 7
+        PJ = PJ + 1
+        menuPJ.innerHTML = PJ
+        battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
+        nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
+        nivelUpSubDescri.innerHTML = `Batalha Nivel 5 Desbloqueado`
+        displayNivelUp.style.display = "block"
+    }
+    //Verificar Nivel Up (Nivel 8)
+    if (EXP >= 601 && nivel == 7) {
+        nivel = 8
+        PJ = PJ + 1
+        menuPJ.innerHTML = PJ
+        battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
+        nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
+        nivelUpSubDescri.innerHTML = `+ 1 Slot de Jogada liberado.`
+        displayNivelUp.style.display = "block"
+        totalJogadasMax = totalJogadasMax + 1
+        jogSlot3.style.display = "inline-block"
+    }
+    //Verificar Nivel Up (Nivel 9)
+    if (EXP >= 701 && nivel == 8) {
+        nivel = 9
+        PJ = PJ + 1
+        menuPJ.innerHTML = PJ
+        battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
+        nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
+        nivelUpSubDescri.innerHTML = `Batalha Nivel 6 e Final Desbloqueado`
+    }
+    //Verificar Nivel Up (Nivel 10)
+    if (EXP >= 801 && nivel == 9) {
+        nivel = 10
+        PJ = PJ + 1
+        menuPJ.innerHTML = PJ
+        battleFinishDescri2.innerHTML = `Pontos de Jogada + 1`
+        nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`
+        nivelUpSubDescri.innerHTML = `+ 1 Slot de Jogada liberado.`
+        displayNivelUp.style.display = "block"
+        totalJogadasMax = totalJogadasMax + 1
+        jogSlot4.style.display = "inline-block"
+    }
+
     // Resetando Batalha
     batalha = false
     playerChange = false;

@@ -25,18 +25,34 @@ imgJogEsponjaFalse.addEventListener("click", t => {
                                 PJ = PJ - 1
                                 menuPJ.innerHTML = PJ
                                 jogEsponjaFalse.style.opacity = "90%"
-                                jogadasPlayerEsponja = true;
-                                jogEsponjaFalse.style.display = "none";
-                                jogEsponjaTrue.style.display = "inline-block";
-                                changeEsponja.style.display = "inline-block";
+                                jogadasPlayerEsponja = false;
+                                jogEsponjaFalse.style.display = "inline-block";
                         } else {
                                 alert(`ERRO! Você tem ${PJ} PJ, e você precisa de 1 PJ para comprar esta Jogada`)
                         }
                 } else {
-                        jogadasPlayerEsponja = true;
-                        jogEsponjaFalse.style.display = "none";
-                        jogEsponjaTrue.style.display = "inline-block";
-                        changeEsponja.style.display = "inline-block";
+                        if (totalJogadas < totalJogadasMax) {
+                                if (slot1 == false) {
+                                        jogSlot1.style.display = "none"
+                                        slot1 = true
+                                } else if (slot2 == false){
+                                        jogSlot2.style.display = "none"
+                                        slot2 = true
+                                } else if (slot3 == false){
+                                        jogSlot3.style.display = "none"
+                                        slot3 = true
+                                } else if (slot4 == false){
+                                        jogSlot4.style.display = "none"
+                                        slot4 = true
+                                }
+                                jogadasPlayerEsponja = true;
+                                jogEsponjaFalse.style.display = "none";
+                                jogEsponjaTrue.style.display = "inline-block";
+                                changeEsponja.style.display = "inline-block";
+                                totalJogadas = totalJogadas + 1
+                        } else {
+                                alert(`O número maximo de Jogadas para cada Batalha é ${totalJogadasMax}.`)
+                        }
                 }
         } else {
                 alert("ERRO! Batalha em andamento. Por favor, termine a Batalha antes de mudar as suas jogadas.")
@@ -44,6 +60,20 @@ imgJogEsponjaFalse.addEventListener("click", t => {
 })
 imgJogEsponjaTrue.addEventListener("click", t => {
         if (batalha == false) {
+                if (slot1 == true) {
+                        jogSlot1.style.display = "inline-block"
+                        slot1 = false
+                } else if (slot2 == true){
+                        jogSlot2.style.display = "inline-block"
+                        slot2 = false
+                } else if (slot3 == true){
+                        jogSlot3.style.display = "inline-block"
+                        slot3 = false
+                } else if (slot4 == true){
+                        jogSlot4.style.display = "inline-block"
+                        slot4 = false
+                }
+                totalJogadas = totalJogadas - 1
                 jogadasPlayerEsponja = false;
                 jogEsponjaFalse.style.display = "inline-block";
                 jogEsponjaTrue.style.display = "none";
@@ -62,24 +92,52 @@ imgJogArFalse.addEventListener("click", t => {
                                 PJ = PJ - 2
                                 menuPJ.innerHTML = PJ
                                 jogArFalse.style.opacity = "90%"
+                                jogadasPlayerAr = false;
+                                jogArFalse.style.display = "inline-block";
+                        } else {
+                                alert(`ERRO! Você tem ${PJ} PJ, e você precisa de 2 PJ para comprar esta Jogada`)
+                        }
+                } else {
+                        if (totalJogadas < totalJogadasMax) {
+                                if (slot1 == false) {
+                                        jogSlot1.style.display = "none"
+                                        slot1 = true
+                                } else if (slot2 == false){
+                                        jogSlot2.style.display = "none"
+                                        slot2 = true
+                                } else if (slot3 == false){
+                                        jogSlot3.style.display = "none"
+                                        slot3 = true
+                                } else if (slot4 == false){
+                                        jogSlot4.style.display = "none"
+                                        slot4 = true
+                                }
                                 jogadasPlayerAr = true;
                                 jogArFalse.style.display = "none";
                                 jogArTrue.style.display = "inline-block";
                                 changeAr.style.display = "inline-block";
                         } else {
-                                alert(`ERRO! Você tem ${PJ} PJ, e você precisa de 2 PJ para comprar esta Jogada`)
+                                alert(`O número maximo de Jogadas para cada Batalha é ${totalJogadasMax}.`)
                         }
-                } else {
-                        jogadasPlayerAr = true;
-                        jogArFalse.style.display = "none";
-                        jogArTrue.style.display = "inline-block";
-                        changeAr.style.display = "inline-block";
                 }
         } else {
                 alert("ERRO! Batalha em andamento. Por favor, termine a Batalha antes de mudar as suas jogadas.")
         }
 })
 imgJogArTrue.addEventListener("click", t => {
+        if (slot1 == true) {
+                jogSlot1.style.display = "inline-block"
+                slot1 = false
+        } else if (slot2 == true){
+                jogSlot2.style.display = "inline-block"
+                slot2 = false
+        } else if (slot3 == true){
+                jogSlot3.style.display = "inline-block"
+                slot3 = false
+        } else if (slot4 == true){
+                jogSlot4.style.display = "inline-block"
+                slot4 = false
+        }
         if (batalha == false) {
                 jogadasPlayerAr = false;
                 jogArFalse.style.display = "inline-block";
@@ -99,24 +157,52 @@ imgJogAguaFalse.addEventListener("click", t => {
                                 PJ = PJ - 2
                                 menuPJ.innerHTML = PJ
                                 jogAguaFalse.style.opacity = "90%"
+                                jogadasPlayerAgua = false;
+                                jogAguaFalse.style.display = "inline-block";
+                        } else {
+                                alert(`ERRO! Você tem ${PJ} PJ, e você precisa de 2 PJ para comprar esta Jogada`)
+                        }
+                } else {
+                        if (totalJogadas < totalJogadasMax) {
+                                if (slot1 == false) {
+                                        jogSlot1.style.display = "none"
+                                        slot1 = true
+                                } else if (slot2 == false){
+                                        jogSlot2.style.display = "none"
+                                        slot2 = true
+                                } else if (slot3 == false){
+                                        jogSlot3.style.display = "none"
+                                        slot3 = true
+                                } else if (slot4 == false){
+                                        jogSlot4.style.display = "none"
+                                        slot4 = true
+                                }
                                 jogadasPlayerAgua = true;
                                 jogAguaFalse.style.display = "none";
                                 jogAguaTrue.style.display = "inline-block";
                                 changeAgua.style.display = "inline-block";
                         } else {
-                                alert(`ERRO! Você tem ${PJ} PJ, e você precisa de 2 PJ para comprar esta Jogada`)
+                                alert(`O número maximo de Jogadas para cada Batalha é ${totalJogadasMax}.`)
                         }
-                } else {
-                        jogadasPlayerAgua = true;
-                        jogAguaFalse.style.display = "none";
-                        jogAguaTrue.style.display = "inline-block";
-                        changeAgua.style.display = "inline-block";
                 }
         } else {
                 alert("ERRO! Batalha em andamento. Por favor, termine a Batalha antes de mudar as suas jogadas.")
         }
 })
 imgJogAguaTrue.addEventListener("click", t => {
+        if (slot1 == true) {
+                jogSlot1.style.display = "inline-block"
+                slot1 = false
+        } else if (slot2 == true){
+                jogSlot2.style.display = "inline-block"
+                slot2 = false
+        } else if (slot3 == true){
+                jogSlot3.style.display = "inline-block"
+                slot3 = false
+        } else if (slot4 == true){
+                jogSlot4.style.display = "inline-block"
+                slot4 = false
+        }
         if (batalha == false) {
                 jogadasPlayerAgua = false;
                 jogAguaFalse.style.display = "inline-block";
@@ -136,24 +222,52 @@ imgJogFogoFalse.addEventListener("click", t => {
                                 PJ = PJ - 2
                                 menuPJ.innerHTML = PJ
                                 jogFogoFalse.style.opacity = "90%"
+                                jogadasPlayerFogo = false;
+                                jogFogoFalse.style.display = "inline-block";
+                        } else {
+                                alert(`ERRO! Você tem ${PJ} PJ, e você precisa de 3 PJ para comprar esta Jogada`)
+                        }
+                } else {
+                        if (totalJogadas < totalJogadasMax) {
+                                if (slot1 == false) {
+                                        jogSlot1.style.display = "none"
+                                        slot1 = true
+                                } else if (slot2 == false){
+                                        jogSlot2.style.display = "none"
+                                        slot2 = true
+                                } else if (slot3 == false){
+                                        jogSlot3.style.display = "none"
+                                        slot3 = true
+                                } else if (slot4 == false){
+                                        jogSlot4.style.display = "none"
+                                        slot4 = true
+                                }
                                 jogadasPlayerFogo = true;
                                 jogFogoFalse.style.display = "none";
                                 jogFogoTrue.style.display = "inline-block";
                                 changeFogo.style.display = "inline-block";
                         } else {
-                                alert(`ERRO! Você tem ${PJ} PJ, e você precisa de 3 PJ para comprar esta Jogada`)
+                                alert(`O número maximo de Jogadas para cada Batalha é ${totalJogadasMax}.`)
                         }
-                } else {
-                        jogadasPlayerFogo = true;
-                        jogFogoFalse.style.display = "none";
-                        jogFogoTrue.style.display = "inline-block";
-                        changeFogo.style.display = "inline-block";
                 }
         } else {
                 alert("ERRO! Batalha em andamento. Por favor, termine a Batalha antes de mudar as suas jogadas.")
         }
 })
 imgJogFogoTrue.addEventListener("click", t => {
+        if (slot1 == true) {
+                jogSlot1.style.display = "inline-block"
+                slot1 = false
+        } else if (slot2 == true){
+                jogSlot2.style.display = "inline-block"
+                slot2 = false
+        } else if (slot3 == true){
+                jogSlot3.style.display = "inline-block"
+                slot3 = false
+        } else if (slot4 == true){
+                jogSlot4.style.display = "inline-block"
+                slot4 = false
+        }
         if (batalha == false) {
                 jogadasPlayerFogo = false;
                 jogFogoFalse.style.display = "inline-block";
