@@ -291,7 +291,7 @@ butJogar.addEventListener("click", t => {
                     }
 
                     // ####### Verificando se a partida ja chegou no final #######
-                    if (playerScore >= 10 || CPUScore >= 10) {
+                    if (playerScore >= 50 || CPUScore >= 50) {
                         playerPlacar.innerHTML = `${playerScore}`
                         CPUPlacar.innerHTML = `${CPUScore}`
                         butJogar.value = "Acabou!"
@@ -302,11 +302,11 @@ butJogar.addEventListener("click", t => {
                             playButton()
                             window.setTimeout(function () {
                                 playButton()
-                                EXP = EXP + 100 //50
+                                EXP = EXP + 50
                                 battleFinish()
                             }, 5000);
                         } else {
-                            if (playerScore >= 10) {
+                            if (playerScore >= 50) {
                                 battleFinishTitle.innerHTML = "Parabens! Você ganhou!"
                                 battleFinishDescri1.innerHTML = "Exp + 100"
                                 playButton()
@@ -316,13 +316,13 @@ butJogar.addEventListener("click", t => {
                                     battleFinish()
                                 }, 5000);
                             }
-                            if (CPUScore >= 10) {
+                            if (CPUScore >= 50) {
                                 battleFinishTitle.innerHTML = "Você Perdeu!"
                                 battleFinishDescri1.innerHTML = "Exp + 20"
                                 playButton()
                                 window.setTimeout(function () {
                                     playButton()
-                                    EXP = EXP + 100 //20
+                                    EXP = EXP + 20
                                     battleFinish()
                                 }, 5000);
                             }
@@ -361,7 +361,7 @@ function resumo() {
 function battleFinish() {
 
     //Verificar Nivel Up (Nivel 2)
-    if (EXP >= 20 && nivel == 1) {
+    if (EXP >= 300 && nivel == 1) {
         nivel = 2
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -373,7 +373,7 @@ function battleFinish() {
         jogSlot1.style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 3)
-    if (EXP >= 101 && nivel == 2) {
+    if (EXP >= 800 && nivel == 2) {
         nivel = 3
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -383,7 +383,7 @@ function battleFinish() {
         displayNivelUp.style.display = "block"
     }
     //Verificar Nivel Up (Nivel 4)
-    if (EXP >= 201 && nivel == 3) {
+    if (EXP >= 1500 && nivel == 3) {
         nivel = 4
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -393,7 +393,7 @@ function battleFinish() {
         displayNivelUp.style.display = "block"
     }
     //Verificar Nivel Up (Nivel 5)
-    if (EXP >= 301 && nivel == 4) {
+    if (EXP >= 2400 && nivel == 4) {
         nivel = 5
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -405,7 +405,7 @@ function battleFinish() {
         jogSlot2.style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 6)
-    if (EXP >= 401 && nivel == 5) {
+    if (EXP >= 3500 && nivel == 5) {
         nivel = 6
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -415,7 +415,7 @@ function battleFinish() {
         displayNivelUp.style.display = "block"
     }
     //Verificar Nivel Up (Nivel 7)
-    if (EXP >= 501 && nivel == 6) {
+    if (EXP >= 4800 && nivel == 6) {
         nivel = 7
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -425,7 +425,7 @@ function battleFinish() {
         displayNivelUp.style.display = "block"
     }
     //Verificar Nivel Up (Nivel 8)
-    if (EXP >= 601 && nivel == 7) {
+    if (EXP >= 6300 && nivel == 7) {
         nivel = 8
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -437,7 +437,7 @@ function battleFinish() {
         jogSlot3.style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 9)
-    if (EXP >= 701 && nivel == 8) {
+    if (EXP >= 8000 && nivel == 8) {
         nivel = 9
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
@@ -446,7 +446,7 @@ function battleFinish() {
         nivelUpSubDescri.innerHTML = `Batalha Nivel 6 e Final Desbloqueado`
     }
     //Verificar Nivel Up (Nivel 10)
-    if (EXP >= 801 && nivel == 9) {
+    if (EXP >= 9900 && nivel == 9) {
         nivel = 10
         PJ = PJ + 1
         menuPJ.innerHTML = PJ
