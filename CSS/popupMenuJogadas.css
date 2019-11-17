@@ -1,0 +1,151 @@
+#menuJogadasPaiBg {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.600);
+    height: 100vh;
+    width: 100vw;
+    margin: -8px;
+    float: left;
+    position: fixed;
+    /* Alinhar na Horizontal OBS: Precisa de "Display Flex*/
+    justify-content: center;
+    /* Alinhar na Vertical OBS: Precisa de "Display Flex*/
+    align-items: center;
+    z-index: 9999;
+}
+#menuJogadasPai {
+    text-align: center;
+    padding: 20px;
+    width: 700px;
+    height: 500px;
+    min-height: 300px;
+    background: rgb(223, 223, 223);
+    border-radius: 30px 30px 30px 30px;
+}
+.menuJogadasTitle {
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+/* Jogadas Botão */
+.imgEscolherMenuJogadas {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    opacity: 90%;
+}
+.imgEscolherMenuJogadas:hover {
+    opacity: 100%;
+    height: 75px;
+    width: 75px;
+    margin-top: -30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    transition: 0.1s ease-in;
+}
+.imgEscolherMenuJogadasEsponja {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    opacity: 40%;
+}
+.imgEscolherMenuJogadasEsponja:hover {
+    opacity: 100%;
+    height: 75px;
+    width: 75px;
+    margin-top: -30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    transition: 0.1s ease-in;
+}
+.imgEscolherMenuJogadasAr {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    opacity: 40%;
+}
+.imgEscolherMenuJogadasAr:hover {
+    opacity: 100%;
+    height: 75px;
+    width: 75px;
+    margin-top: -30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    transition: 0.1s ease-in;
+}
+.imgEscolherMenuJogadasAgua {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    opacity: 40%;
+}
+.imgEscolherMenuJogadasAgua:hover {
+    opacity: 100%;
+    height: 75px;
+    width: 75px;
+    margin-top: -30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    transition: 0.1s ease-in;
+}
+.imgEscolherMenuJogadasFogo {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    opacity: 40%;
+}
+.imgEscolherMenuJogadasFogo:hover {
+    opacity: 100%;
+    height: 75px;
+    width: 75px;
+    margin-top: -30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+    transition: 0.1s ease-in;
+}
+/* Jogadas True */
+#imgJogEsponjaTrue {
+    display: none;
+}
+#imgJogArTrue {
+    display: none;
+}
+#imgJogAguaTrue {
+    display: none;
+}
+#imgJogFogoTrue {
+    display: none;
+}
+/* Jogadas False */
+
+/* Jogadas Descrição */
+.divMenuJogadasDescri{
+    margin-top: 30px;
+    background: cornflowerblue;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.644);
+    border-radius: 10px 10px 10px 10px;
+}
+#menuJogadasDescriTitulo {
+    font-size: 25pt;
+}
+#menuJogadasDescri4 {
+    color: red;
+}

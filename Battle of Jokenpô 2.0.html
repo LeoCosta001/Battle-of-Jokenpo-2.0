@@ -9,10 +9,12 @@
     <link rel="stylesheet" type="text/css" href="CSS/jokenpo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/displayBattleFinish.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="CSS/popupHelp.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/popupMenuJogadas.css" />
     <title>Game: Jokenpô 2.0</title>
 </head>
 
 <body>
+    <!-- Popup Help-->
     <img id="helpButton" src="imagens/help.png">
     <div id="helpPaiBg">
         <div id="helpPai">
@@ -20,29 +22,72 @@
             <div>Central de Ajuda.</div></br>
             <div>- Ganha a batalha quem fizer 50 Pontos primeiro</div>
             <div>- Vitória da 100 de Exp, Empate 50 de Exp e Derrota 20 de Exp</div>
-            <div>- Com 300 Pontos de Exp você conquista o Nivel 2</div>
+            <div>- A cada nivel você ganha 1 Ponto de Jogada que poderá ser usado para adquirir novas jogadas</div>
+            <div>- Só pode escolher no maximo 5 jogadas diferentes por partida</div>
+            <div>- Lista de Nivel: Nv2 = 300 (+300)
+                    Nv3 = 800 (+500)
+                    Nv4 = 1500 (+700)
+                    Nv5 = 2400 (+900)
+                    Nv6 = 3500 (+1100)
+                    Nv7 = 4800 (+1300)</div>
         </div>
     </div>
+    <!-- Popup Minhas Jogadas-->
+    <div id="menuJogadasPaiBg">
+        <div id="popupclose">Close</div>
+        <div id="menuJogadasPai">
+            <div class="menuJogadasTitle">Minhas Jogadas</div>
+            <img id="imgJogPedraTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/pedra.png">
+            <img id="imgJogPapelTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/papel.png">
+            <img id="imgJogTesouraTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/tesoura.png">
+            <!-- Jogadas Ativas -->
+            <img id="imgJogEsponjaTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/esponja.png">
+            <img id="imgJogArTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/ar.png">
+            <img id="imgJogAguaTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/agua.png">
+            <img id="imgJogFogoTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/fogo.png">
+            <!-- Jogadas Desativas -->
+            <div class="menuJogadasTitle">Aprender Nova Jogada</div>
+            <img id="imgJogEsponjaFalse" class="imgEscolherMenuJogadasEsponja" src="imagens/jogadas/esponja.png">
+            <img id="imgJogArFalse" class="imgEscolherMenuJogadasAr" src="imagens/jogadas/ar.png">
+            <img id="imgJogAguaFalse" class="imgEscolherMenuJogadasAgua" src="imagens/jogadas/agua.png">
+            <img id="imgJogFogoFalse" class="imgEscolherMenuJogadasFogo" src="imagens/jogadas/fogo.png">
+            <!-- Descrição das Jogadas -->
+            <div class="divMenuJogadasDescri">
+                <div id="menuJogadasDescriTitulo"></div>
+                <div id="menuJogadasDescri1"></div>
+                <div id="menuJogadasDescri2"></div>
+                <div id="menuJogadasDescri3"></div>
+                <div id="menuJogadasDescri4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Titulo -->
     <div class="gameTitle">Battle of Jokenpô 2.0</div>
     <div class="divPai">
         <!-- Menu -->
         <div id="menu">
-            <div id="divJogadasMenu"><img id="jogadasMenu" src="imagens/jogadasIcon.png"></div>
+            <div id="divMenuJogadas"><img id="menuJogadas" src="imagens/jogadasIcon.png"></div>
             <div class="menuText">Nível: <p class="menuText" id="menuNivel">1</p>
             </div>
             <div class="menuText">Exp: <p class="menuText" id="menuEXP">0</p>
             </div>
+            <div class="menuText">PJ: <p class="menuText" id="menuPJ">0</p>
+            </div>
         </div>
         <!-- Botão de Iniciar Partida -->
         <input id="butBatalhaNivel1" class="butBatalha" type="button" value="Batalha Nivel 1">
-        <!--Display de Batalha Nivel1-->
+        <!--Display de Batalha-->
         <div id="displayBatalha">
             <!-- Opções do Usuário -->
             <p class="tituloEscolher">Escolha uma dessas jogadas</p>
             <div class="divOpcoesDoPlayer">
-                <img id="imgPedra" class="imgEscolher" src="imagens/pedra.png">
-                <img id="imgPapel" class="imgEscolher" src="imagens/papel.png">
-                <img id="imgTesoura" class="imgEscolher" src="imagens/tesoura.png">
+                <img id="imgPedra" class="imgEscolher" src="imagens/jogadas/pedra.png">
+                <img id="imgPapel" class="imgEscolher" src="imagens/jogadas/papel.png">
+                <img id="imgTesoura" class="imgEscolher" src="imagens/jogadas/tesoura.png">
+                <img id="imgEsponja" class="imgEscolher" src="imagens/jogadas/esponja.png">
+                <img id="imgAr" class="imgEscolher" src="imagens/jogadas/ar2.png">
+                <img id="imgAgua" class="imgEscolher" src="imagens/jogadas/agua2.png">
+                <img id="imgFogo" class="imgEscolher" src="imagens/jogadas/fogo.png">
             </div>
             <!-- Botão de Iniciar Partida -->
             <input id="butJogar" type="button" value="Jogar">
@@ -70,7 +115,8 @@
         <!-- Display Battle Finish -->
         <div id="displayBattleFinish">
             <div id="battleFinishTitle"></div>
-            <div id="battleFinishDescri"></div>
+            <div id="battleFinishDescri1"></div>
+            <div id="battleFinishDescri2"></div>
             <div class="placar">
                 <div class="placarFilho">
                     <p class="titlePlacar">Você:</p>
@@ -87,16 +133,20 @@
                 <div id="nivelUpDescri"></div>
                 <div id="nivelUpSubDescri"></div>
             </div>
+            <!-- Display de Jogadas -->
+            <div id="displayJogadasAdd">
+                <div id="jogadasAddDescri"></div>
+                <div id="jogadasSubDescri"></div>
+            </div>
             <!-- Botão de Escolher Batalha -->
             <input id="butBattleChange" class="butBatalha" type="button" value="Escolher Batalha">
         </div>
     </div>
     <!--Script-->
-    <script src="script/variavelDeBatalha.js"></script>
     <script src="script/jokenpo.js"></script>
+    <script src="script/variavelDeBatalha.js"></script>
     <script src="script/playerChange.js"></script>
     <script src="script/popupHelp.js"></script>
-
+    <script src="script/popupMenuJogadas.js"></script>
 </body>
-
 </html>
