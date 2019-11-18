@@ -134,8 +134,41 @@
 #imgJogFogoTrue {
     display: none;
 }
-/* Jogadas False */
+/* Slot Vazio */
+.imgJogSlot {
+    opacity: 30%;
+    height: 70px;
+    width: 70px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+#imgJogSlot1 {
+    display: none;
+}
+#imgJogSlot2 {
+    display: none;
+}
+#imgJogSlot3 {
+    display: none;
+}
+#imgJogSlot4 {
+    display: none;
+}
+/* Botão de Change True e False */
+#imgEsponja {
+    display: none;
+}
+#imgAr {
+    display: none;
+}
+#imgAgua {
 
+    display: none;
+}
+#imgFogo {
+
+    display: none;
+}
 /* Jogadas Descrição */
 .divMenuJogadasDescri{
     margin-top: 30px;
