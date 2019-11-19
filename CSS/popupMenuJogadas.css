@@ -182,3 +182,14 @@
 #menuJogadasDescri4 {
     color: red;
 }
+#popupclose {
+    color: white;   
+    background: grey;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.700); */
+    font-size: 20pt;
+    border-radius: 50px 50px 50px 50px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    position: absolute;
+}

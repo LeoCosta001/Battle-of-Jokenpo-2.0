@@ -68,7 +68,7 @@ let jogadasCPUNv2 = ["pedra", "papel", "tesoura", "esponja"];
 let jogadasCPUNv3 = ["pedra", "papel", "tesoura", "papel", "tesoura"];
 let jogadasCPUNv4 = ["pedra", "papel", "tesoura", "pedra", "papel", "tesoura", "agua", "ar"];
 let jogadasCPUNv5 = ["pedra", "papel", "tesoura", "pedra", "papel", "tesoura", "agua", "fogo"];
-let jogadasCPUNv6 = ["pedra", "papel", "tesoura", ,"esponja", "fogo"];
+let jogadasCPUNv6 = ["pedra", "papel", "tesoura", , "esponja", "fogo"];
 let jogadasCPUNv7 = ["pedra", "papel", "tesoura", "esponja", "fogo", "fogo", "agua", "ar"];
 let jogadasPlayerEsponja = "comprar";
 let jogadasPlayerAr = "comprar";
@@ -88,7 +88,8 @@ let slot1 = false;
 let slot2 = false;
 let slot3 = false;
 let slot4 = false;
-let batalhaNivel = 0;
+let batalhaNivel = 1;
+let batalhaNivelADD = 1;
 // ####### Variaveis de Pontuação #######
 let playerScore = 0;
 let CPUScore = 0;
@@ -706,7 +707,7 @@ butJogar.addEventListener("click", t => {
                         if (playerChange == "pedra" && CPUChange == 8) {
                             pedraXagua();
                         };
-                        
+
                         // Usuario escolhe Papel
                         if (playerChange == "papel" && CPUChange == 1) {
                             papelXpedra();
@@ -955,7 +956,7 @@ butJogar.addEventListener("click", t => {
                         if (playerChange == "pedra" && CPUChange == 8) {
                             pedraXagua();
                         };
-                        
+
                         // Usuario escolhe Papel
                         if (playerChange == "papel" && CPUChange == 1) {
                             papelXpedra();
@@ -1391,7 +1392,7 @@ butJogar.addEventListener("click", t => {
                         if (playerChange == "pedra" && CPUChange == 8) {
                             pedraXfogo();
                         };
-                        
+
                         // Usuario escolhe Papel
                         if (playerChange == "papel" && CPUChange == 1) {
                             papelXpedra();
@@ -1592,6 +1593,7 @@ function battleFinish() {
     }
     //Verificar Nivel Up (Nivel 3)
     if (EXP >= 800 && nivel == 2) {
+        batalhaNivelADD = batalhaNivelADD +1
         nivel = 3;
         PJ = PJ + 1;
         menuPJ.innerHTML = PJ;
@@ -1599,10 +1601,10 @@ function battleFinish() {
         nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`;
         nivelUpSubDescri.innerHTML = `Batalha Nivel 2 Desbloqueado`;
         displayNivelUp.style.display = "block";
-        butBatalhaNivel2style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 4)
     if (EXP >= 1500 && nivel == 3) {
+        batalhaNivelADD = batalhaNivelADD +1
         nivel = 4;
         PJ = PJ + 1;
         menuPJ.innerHTML = PJ;
@@ -1610,7 +1612,6 @@ function battleFinish() {
         nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`;
         nivelUpSubDescri.innerHTML = `Batalha Nivel 3 Desbloqueado`;
         displayNivelUp.style.display = "block";
-        butBatalhaNivel3style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 5)
     if (EXP >= 2400 && nivel == 4) {
@@ -1626,6 +1627,7 @@ function battleFinish() {
     }
     //Verificar Nivel Up (Nivel 6)
     if (EXP >= 3500 && nivel == 5) {
+        batalhaNivelADD = batalhaNivelADD +1
         nivel = 6;
         PJ = PJ + 1;
         menuPJ.innerHTML = PJ;
@@ -1633,10 +1635,10 @@ function battleFinish() {
         nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`;
         nivelUpSubDescri.innerHTML = `Batalha Nivel 4 Desbloqueado`;
         displayNivelUp.style.display = "block";
-        butBatalhaNivel4style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 7)
     if (EXP >= 4800 && nivel == 6) {
+        batalhaNivelADD = batalhaNivelADD +1
         nivel = 7;
         PJ = PJ + 1;
         menuPJ.innerHTML = PJ;
@@ -1644,7 +1646,6 @@ function battleFinish() {
         nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`;
         nivelUpSubDescri.innerHTML = `Batalha Nivel 5 Desbloqueado`;
         displayNivelUp.style.display = "block";
-        butBatalhaNivel5style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 8)
     if (EXP >= 6300 && nivel == 7) {
@@ -1660,6 +1661,7 @@ function battleFinish() {
     }
     //Verificar Nivel Up (Nivel 9)
     if (EXP >= 8000 && nivel == 8) {
+        batalhaNivelADD = batalhaNivelADD +1
         nivel = 9
         PJ = PJ + 1
         menuPJ.innerHTML = PJ;
@@ -1667,10 +1669,10 @@ function battleFinish() {
         nivelUpDescri.innerHTML = `Parabens! Você agora está no Nivel ${nivel}`;
         nivelUpSubDescri.innerHTML = `Batalha Nivel 6 e + 1 Slot de Jogada liberado.`;
         jogSlot4.style.display = "inline-block";
-        butBatalhaNivel6style.display = "inline-block"
     }
     //Verificar Nivel Up (Nivel 10)
     if (EXP >= 9900 && nivel == 9) {
+        batalhaNivelADD = batalhaNivelADD +1
         nivel = 10;
         PJ = PJ + 1;
         menuPJ.innerHTML = PJ;
@@ -1679,7 +1681,6 @@ function battleFinish() {
         nivelUpSubDescri.innerHTML = `Batalha Final Desbloqueado`;
         displayNivelUp.style.display = "block";
         totalJogadasMax = totalJogadasMax + 1;
-        butBatalhaNivel7style.display = "inline-block"
     }
 
     // Resetando Batalha
@@ -1713,12 +1714,24 @@ butBattleChange.addEventListener("click", t => {
     displayNivelUp.style.display = "none";
     displayBattleFinish.style.display = "none";
     butBatalhaNivel1.style.display = "inline-block";
-    butBatalhaNivel2.style.display = "inline-block";
-    butBatalhaNivel3.style.display = "inline-block";
-    butBatalhaNivel4.style.display = "inline-block";
-    butBatalhaNivel5.style.display = "inline-block";
-    butBatalhaNivel6.style.display = "inline-block";
-    butBatalhaNivel7.style.display = "inline-block";
+    if (batalhaNivelADD >= 2) {
+        butBatalhaNivel2.style.display = "inline-block";
+    }
+    if (batalhaNivelADD >= 3) {
+        butBatalhaNivel3.style.display = "inline-block";
+    }
+    if (batalhaNivelADD >= 4) {
+        butBatalhaNivel4.style.display = "inline-block";
+    }
+    if (batalhaNivelADD >= 5) {
+        butBatalhaNivel5.style.display = "inline-block";
+    }
+    if (batalhaNivelADD >= 6) {
+        butBatalhaNivel6.style.display = "inline-block";
+    }
+    if (batalhaNivelADD >= 7) {
+        butBatalhaNivel7.style.display = "inline-block";
+    }
     nivelUpDescri.innerHTML = ``;
     nivelUpSubDescri.innerHTML = ``;
     battleFinishDescri2.innerHTML = ``;

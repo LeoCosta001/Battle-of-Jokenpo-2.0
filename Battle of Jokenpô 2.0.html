@@ -18,24 +18,152 @@
     <img id="helpButton" src="imagens/help.png">
     <div id="helpPaiBg">
         <div id="helpPai">
-            <div>Battle of Jokenpô 2.0 (beta)</div>
-            <div>Central de Ajuda.</div></br>
-            <div>- Ganha a batalha quem fizer 50 Pontos primeiro</div>
-            <div>- Vitória da 100 de Exp, Empate 50 de Exp e Derrota 20 de Exp</div>
-            <div>- A cada nivel você ganha 1 Ponto de Jogada que poderá ser usado para adquirir novas jogadas</div>
-            <div>- Só pode escolher no maximo 5 jogadas diferentes por partida</div>
-            <div>- Lista de Nivel: Nv2 = 300 (+300)
-                Nv3 = 800 (+500)
-                Nv4 = 1500 (+700)
-                Nv5 = 2400 (+900)
-                Nv6 = 3500 (+1100)
-                Nv7 = 4800 (+1300)</div>
+            <dl>
+                <dt id="helpTitle">Battle of Jokenpô 2.0 (beta)</dt>
+                <dt id="helpSubTitle">Central de Ajuda.</dt>
+                <dt>Descrição:</dt>
+                <dd>- Um jogo de Jokenpô onde você terá que enfrentar inimigos através de batalhas de Jokenpô. Podendo
+                    subir de Nível e enfrentar desafios cada vez maiores.</dd>
+                <dt>Jogabilidade:</dt>
+                <dd>
+                    <p class="helpSubTitleDescri">Level Up:</p>
+                    - É possível subir o seu Nível vencendo as batalhas, fazendo isto você conseguirá desabilitar novas
+                    jogadas, mais slot para por jogadas e novas Batalhas.
+
+                    <p class="helpSubTitleDescri">Inimigos:</p>
+                    - Cada inimigo possui uma característica própria possibilitando uma maior chance de uso de
+                    determinadas jogadas e diminuindo a chance de outras.
+
+                    <p class="helpSubTitleDescri">Batalhas:</p>
+                    - Em uma Batalha existe uma meta de pontuação que varia de acordo com o nivel da Batalha.</br>
+                    - Para cada Partida o vencedor ganha 10 pontos, o perdedor ganha 0 ponto e no caso de empate ambos
+                    ganharão 5 pontos.</br>
+                    - Se a Batalha terminar em empate então o Jogador receberá só metade da experiência.</br>
+                    - Se a Batalha terminar em derrota (para o Jogador) então o jogador receberá somente 20% da
+                    experiencia.
+
+                    <p class="helpSubTitleDescri">Experiência:</p>
+                    - Sempre que terminar uma Batalha você receberá experiencia.</br>
+                    - Sempre que atingir uma quantidade mínima de experiência você ganhará mais 1 Nível, mas esta
+                    quantidade miníma varia de acordo com o seu Nível atual.</br>
+                    - Quanto maior o nível da Batalha maior é a quantidade de experiência obtida.
+
+                    <p class="helpSubTitleDescri">Jogadas:</p>
+                    - Para comprar novas jogadas você usa os PJ (Pontos de Jogadas), você ganha 1 desses pontos a cada
+                    nível.</br>
+                    - Depois de comprar uma Jogada nova você pode ativá-la ou desativá-la no Menu de Jogadas.</br>
+                    - Para ativar Novas Jogadas basta você clicar nelas e elas serão colocadas em “Jogadas Ativas”, você
+                    também pode desativá-las clicando novamente nelas, então elas serão passadas para a área de “Jogadas
+                    desativadas”.</br>
+                    - Você só pode ativar ou desativar novas Jogadas em quanto não estiver no meio de uma Batalha.</br>
+                    - Os slots para poder usar mais Jogadas são obtidos conforme você ganha Níveis.
+                </dd>
+                <dt>Níveis:</dt>
+                <dd>
+                    - Para alcançar cada nível é necessário você obter o mínimo exigido para as mesmas. Segue-se a baixo
+                    a lista de experiência mínima para ir para o próximo nível:</br>
+                    - Nv2 = 300 EXP</br>
+                    - Nv3 = 800 EXP</br>
+                    - Nv4 = 1500 EXP</br>
+                    - Nv5 = 2400 EXP</br>
+                    - Nv6 = 3500 EXP</br>
+                    - Nv7 = 4800 EXP</br>
+                    - Nv8 = 6300 EXP</br>
+                    - Nv9 = 8000 EXP</br>
+                    - Nv10 = 9900 EXP</br>
+                </dd>
+                <dt>Níveis de Batalha:</dt>
+                <dd>
+                    <p class="helpSubTitleDescri">Batalha Nível 1:</p>
+                    Descrição: Jogadas Simples</br>
+                    Jogadas: Pedra, Papel, Tesoura</br>
+                    EXP: Vitória = 100 / Empate = 50 / Derrota = 20</br>
+                    Pontos para terminar: 50</br></br>
+
+                    <p class="helpSubTitleDescri">Batalha Nível 2:</p>
+                    Descrição: Jogadas Simples</br>
+                    Jogadas: Pedra, Papel, Tesoura, Esponja</br>
+                    EXP: Vitória = 130 / Empate = 65 / Derrota = 26 (+ 30%)</br>
+                    Pontos para terminar: 60</br></br>
+
+                    <p class="helpSubTitleDescri">Batalha Nível 3:</p>
+                    Descrição: Menos chance de usar pedra</br>
+                    Jogadas: Pedra, Papel, Tesoura</br>
+                    EXP: Vitória = 160 / Empate = 80 / Derrota = 32 (+ 60%)</br>
+                    Pontos para terminar: 65</br></br>
+
+                    <p class="helpSubTitleDescri">Batalha Nível 4:</p>
+                    Descrição: Tem uma pequena chance de usar jogada Água ou Ar</br>
+                    Jogadas: Pedra, Papel, Tesoura, Água, Ar</br>
+                    EXP: Vitória = 190 / Empate = 95 / Derrota = 38 (+ 90%)</br>
+                    Pontos para terminar: 70</br></br>
+
+                    <p class="helpSubTitleDescri">Batalha Nível 5:</p>
+                    Descrição: Tem uma pequena chance de usar jogada Água ou Fogo</br>
+                    Jogadas: Pedra, Papel, Tesoura, Água, Fogo</br>
+                    EXP: Vitória = 220 / Empate = 110 / Derrota = 44 (+ 120%)</br>
+                    Pontos para terminar: 75</br></br>
+
+                    <p class="helpSubTitleDescri">Batalha Nível 6:</p>
+                    Descrição: Usa Jogada Fogo e Esponja</br>
+                    Jogadas: Pedra, Papel, Tesoura, Esponja, Fogo</br>
+                    EXP: Vitória = 250 / Empate = 125 / Derrota = 50 (+ 150%)</br>
+                    Pontos para terminar: 80</br></br>
+
+                    <p class="helpSubTitleDescri">Batalha Nível 7:</p>
+                    Descrição: Mais chances de se usar a jogada Fogo, também usa Água e Ar</br>
+                    Jogadas: Pedra, Papel, Tesoura, Esponja, Ar, Água, Fogo</br>
+                    EXP: Vitória = 300 / Empate = 150 / Derrota = 60 (+ 150%)</br>
+                    Pontos para terminar: 300</br>
+                </dd>
+                <dt>Jogadas:</dt>
+                <dd>
+                    <p class="helpSubTitleDescri">### Pedra ###</p>
+                    Vitória: Tesoura, Fogo</br>
+                    Empate: Pedra, Água, Ar</br>
+                    Derrota: Papel, Esponja</br></br>
+
+                    <p class="helpSubTitleDescri">### Papel ###</p>
+                    Vitória: Pedra, Esponja</br>
+                    Empate: Papel, Ar</br>
+                    Derrota: Tesoura, Fogo, Água</br></br>
+
+                    <p class="helpSubTitleDescri">### Tesoura ###</p>
+                    Vitória: Esponja, Papel</br>
+                    Empate: Tesoura , Ar, Água</br>
+                    Derrota: Pedra, Fogo</br></br>
+
+                    <p class="helpSubTitleDescri">### Esponja ###</p>
+                    Vitória: Água, Pedra</br>
+                    Empate: Esponja, Ar</br>
+                    Derrota: Fogo, Tesoura, Papel</br></br>
+
+                    <p class="helpSubTitleDescri">### Ar ###</p>
+                    Vitória: Fogo</br>
+                    Empate: Ar, Papel, Pedra, Água, Esponja, Tesoura</br>
+                    Derrota:</br>
+                    Observação: Só pode usar 2 vezes</br></br>
+
+                    <p class="helpSubTitleDescri">### Água ###</p>
+                    Vitória: Papel, Fogo</br>
+                    Empate: Água, Pedra, Ar, Tesoura</br>
+                    Derrota: Esponja</br>
+                    Crítico: Fogo (+5 Pontos)</br>
+                    Observação: Só pode usar 2 vezes</br></br>
+
+                    <p class="helpSubTitleDescri">### Fogo ###</p>
+                    Vitória: Tesoura, Esponja, Papel</br>
+                    Empate: Fogo</br>
+                    Derrota: Ar, Pedra, Água</br>
+                    Crítico: Papel (+5 Pontos)</br>
+                </dd>
+            </dl>
         </div>
     </div>
     <!-- Popup Minhas Jogadas-->
     <div id="menuJogadasPaiBg">
-        <div id="popupclose">Close</div>
         <div id="menuJogadasPai">
+            <div id="popupclose">X</div>
             <div class="menuJogadasTitle">Minhas Jogadas</div>
             <img id="imgJogPedraTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/pedra.png">
             <img id="imgJogPapelTrue" class="imgEscolherMenuJogadas" src="imagens/jogadas/papel.png">
