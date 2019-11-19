@@ -89,6 +89,25 @@ body {
 .butBatalha:active {
     background: rgb(132, 247, 132);
 }
+
+#butBatalhaNivel2 {
+    display: none;
+}
+#butBatalhaNivel3 {
+    display: none;
+}
+#butBatalhaNivel4 {
+    display: none;
+}
+#butBatalhaNivel5 {
+    display: none;
+}
+#butBatalhaNivel6 {
+    display: none;
+}
+#butBatalhaNivel7 {
+    display: none;
+}
 /* Botão para escolher jogada */
 .divOpcoesDoPlayer {
     background: limegreen;
